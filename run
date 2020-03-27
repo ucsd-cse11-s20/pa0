@@ -1,4 +1,10 @@
 #!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo "Please provide the class name. For instance: ./run DesignRecipeExamples";
+    exit;
+fi;
+
 rm *.class &> /dev/null;
 javac -cp tester.jar *.java &&
 java -classpath tester.jar:. tester.Main $1
