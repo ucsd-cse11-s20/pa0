@@ -1,4 +1,4 @@
 #!/bin/bash
 rm *.class &> /dev/null;
-javac -cp tester.jar *.java
+javac -cp tester.jar *.java &&
 java -classpath tester.jar:. tester.Main $1
